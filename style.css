@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0 !important;
+}
+
+li {
+  list-style: none;
+}
+li:hover {
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 1px solid #fdfdfd;
+  transform: scale(1.01);
+}
+
+.content_title {
+  position: relative;
+}
+.content_title::after {
+  content: url("./assets/corona-virus.svg");
+  position: absolute;
+  top: 25px;
+  left: 50%;
+}
+
+.main {
+  background: url("./assets/main-bg.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 80px;
+}
+.main_content {
+  height: 100%;
+}
+.main_title {
+  position: relative;
+  bottom: 0;
+}
+.main_title::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+}
+
+.header {
+  height: 100px;
+  top: 0;
+}
+.header_content {
+  height: 100%;
+}
+.header_content__burger {
+  position: relative;
+  z-index: 999999;
+  row-gap: 3px;
+  cursor: pointer;
+}
+.header_content__burger div:nth-child(1) {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+}
+.header_content__burger div:nth-child(2) {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+}
+.header_content__burger div:nth-child(3) {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  position: relative;
+}
+.header_content__burger:hover div:nth-child(3) {
+  width: 10px;
+}
+.header_content__burger:hover div:nth-child(1) {
+  width: 15px;
+}
+.header_content__logo {
+  height: 70px;
+  width: 130px;
+  position: relative;
+  z-index: 999999;
+}
+.header_content__number {
+  opacity: 0;
+}
+.header_content__phone {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.header_content__phone:hover .header_content__number {
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  right: 8%;
+  transform: translateX(-50%);
+}
+
+.no-hover:hover div:nth-child(1) {
+  width: 25px;
+}
+
+.no-hover:hover div:nth-child(3) {
+  width: 25px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery_images div {
+  height: 270px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.team_avatar {
+  width: 150px;
+  height: 150px;
+}
+
+.form_btn {
+  width: 100%;
+  height: 56px;
+  cursor: pointer;
+}
+.form_btn:hover {
+  box-shadow: 2px 2px 20px #474747;
+  transition: 0.5s;
+}
+.form_input {
+  background: #f6f8ff !important;
+}
+
+.footer {
+  background: url("./assets/footer-bg.png") no-repeat center/cover;
+  height: 350px;
+}
+
+@media (max-width: 800px) {
+  .menu_logo {
+    right: 40%;
+  }
+  .menu_logo_logo {
+    right: 40%;
+  }
+  .header_content__phone:hover .header_content__number {
+    right: 5%;
+  }
+}
+@media (max-width: 700px) {
+  .header_content__phone:hover .header_content__number {
+    right: 0;
+    top: 70px;
+  }
+  .gallery_images div {
+    height: 220px;
+  }
+}
+@media (max-width: 500px) {
+  .header_content__phone:hover .header_content__number {
+    opacity: 0;
+  }
+  .menu_logo {
+    right: 35%;
+  }
+  .gallery_images div {
+    height: 150px;
+  }
+}/*# sourceMappingURL=style.css.map */

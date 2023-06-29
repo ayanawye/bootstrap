@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+button {
+  background: none;
+  border: none;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+}
+ul {
+  padding: 0 !important;
+}
+li {
+  list-style: none;
+  &:hover {
+    width: max-content;
+    border-bottom: 1px solid #fdfdfd;
+    transform: scale(1.01);
+  }
+}
+.content_title {
+  position: relative;
+  &::after {
+    content: url("./assets/corona-virus.svg");
+    position: absolute;
+    top: 25px;
+    left: 50%;
+  }
+}
+
+.main {
+  background: url("./assets/main-bg.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 80px;
+  &_content {
+    height: 100%;
+  }
+  &_title {
+    position: relative;
+    bottom: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      width: 30px;
+      height: 1px;
+      background: #fff;
+    }
+  }
+}
+
+.header {
+  height: 100px;
+  top: 0;
+  &_content {
+    height: 100%;
+    &__burger {
+      position: relative;
+      z-index: 999999;
+      row-gap: 3px;
+      cursor: pointer;
+      & div:nth-child(1) {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        position: relative;
+      }
+      & div:nth-child(2) {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+      }
+      & div:nth-child(3) {
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        position: relative;
+      }
+      &:hover {
+        & div:nth-child(3) {
+          width: 10px;
+        }
+        & div:nth-child(1) {
+          width: 15px;
+        }
+      }
+    }
+    &__logo {
+      height: 70px;
+      width: 130px;
+      position: relative;
+      z-index: 999999;
+    }
+    &__number {
+      opacity: 0;
+    }
+    &__phone {
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      &:hover {
+        & .header_content__number {
+          opacity: 1;
+          position: absolute;
+          top: 40px;
+          right: 8%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+
+.no-hover:hover div:nth-child(1) {
+  width: 25px;
+}
+.no-hover:hover div:nth-child(3) {
+  width: 25px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.menu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.gallery{
+  &_images{
+    & div{
+      height: 270px ;
+    }
+  }
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.team {
+  &_avatar {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.form {
+  &_btn {
+    width: 100%;
+    height: 56px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 2px 20px #474747;
+      transition: 0.5s;
+    }
+  }
+  &_input {
+    background: #f6f8ff !important;
+  }
+}
+
+.footer {
+  background: url("./assets/footer-bg.png") no-repeat center/cover;
+  height: 350px;
+}
+
+@media (max-width: 800px) {
+  .menu_logo {
+    right: 40%;
+    &_logo {
+      right: 40%;
+    }
+  }
+  .header {
+    &_content {
+      &__phone {
+        &:hover {
+          .header_content__number {
+            right: 5%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .header {
+    &_content {
+      &__phone {
+        &:hover {
+          .header_content__number {
+            right: 0;
+            top: 70px;
+          }
+        }
+      }
+    }
+  }
+  .gallery{
+    &_images{
+      & div{
+        height: 220px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    &_content {
+      &__phone {
+        &:hover {
+          .header_content__number {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+  .menu{
+    &_logo {
+      right: 35%;
+    }
+  }
+  .gallery{
+    &_images{
+      & div{
+        height: 150px;
+      }
+    }
+  }
+}
